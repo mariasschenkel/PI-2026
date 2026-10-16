@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - InclusIA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+  <div class="background">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
+    <div class="bubble b6"></div>
+    <div class="bubble b7"></div>
+    <div class="bubble b8"></div>
+  </div>
+
+  <main class="container">
+    <h1>CADASTRO</h1>
+
+    <form id="cadastroForm">
+
+      <h2>INFORMAÇÕES DO USUÁRIO</h2>
+
+      <label for="nome">NOME COMPLETO</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="idade">IDADE</label>
+      <input type="number" id="idade" name="idade" min="1" required>
+
+      <label for="email">E-MAIL</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="senha">SENHA</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <h2>TIPO DE NECESSSIDADE</h2>
+      <div class="checkbox-buttons">
+        <input type="checkbox" id="auditiva" name="necessidades" value="auditiva">
+        <label for="auditiva">Auditiva</label>
+
+        <input type="checkbox" id="visual" name="necessidades" value="visual">
+        <label for="visual">Visual</label>
+
+        <input type="checkbox" id="motora" name="necessidades" value="motora">
+        <label for="motora">Motora</label>
+
+        <input type="checkbox" id="intelectual" name="necessidades" value="intelectual">
+        <label for="intelectual">Intelectual</label>
+
+        <input type="checkbox" id="nenhuma" name="necessidades" value="nenhuma">
+        <label for="nenhuma">Nenhuma</label>
+      </div>
+
+      <h2>RESPONSÁVEL / ACOMPANHANTE (OPCIONAL)</h2>
+
+      <label for="nomeResp">NOME DO RESPONSÁVEL</label>
+      <input type="text" id="nomeResp" name="nomeResp">
+
+      <label for="telResp">TELEFONE</label>
+      <input type="tel" id="telResp" name="telResp" placeholder="(00) 00000-0000">
+
+      <label for="emailResp">E-MAIL</label>
+      <input type="email" id="emailResp" name="emailResp">
+
+      <!-- BOTÃO CORRETO -->
+      <button type="submit" class="btn-cadastrar">CADASTRAR</button>
+
+    </form>
+  </main>
+
+<script src="cadastro.js"></script>
+
+</body>
+</html>
