@@ -162,4 +162,109 @@ h1{
 /* Bordas arredondadas padrão */
 .card {
   border-radius: 30px;
+  
+/* Rodapé do IncluseIA */
+.footer-acessibilidade {
+  background-color: #17324d;
+  color: #0213fa;
+  padding: 35px 8% 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-contato {
+  flex: 1;
+  min-width: 230px;
+}
+
+.footer-acessibilidade h3 {
+  font-size: 25px;
+  margin: 0 0 12px;
+}
+
+.footer-acessibilidade h4 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.footer-acessibilidade p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 8px 0;
+}
+
+.footer-acessibilidade a {
+  color: #004359;
+  text-decoration: underline;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+.footer-acessibilidade a:hover,
+.footer-acessibilidade a:focus {
+  color: #034892;
+  outline-offset: 4px;
+}
+
+.footer-final {
+  max-width: 1200px;
+  margin: 25px auto 0;
+  padding-top: 15px;
+  border-top: 1px solid #076dc7;
+  text-align: center;
+}
+
+.footer-final p {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+  .footer-acessibilidade {
+    padding: 28px 6% 18px;
+  }
+
+  .footer-conteudo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-info,
+  .footer-contato {
+    min-width: 0;
+    width: 100%;
+    .footer-conteudo {
+      display: block;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .footer-acessibilidade {
+      background-color: #17324d;
+      color: white;
+      width: 100%;
+      box-sizing: border-box;
+  }
+  
+  .footer-final {
+      text-align: center;
+  }
+  }
+}
+
 }
