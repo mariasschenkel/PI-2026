@@ -9,10 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/secundario.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="stylesheet" href="./css/faq.css">
 </head>
 <body>
     <header>
         <img src="img/logo.png" class="logo" alt="">
+
+      <button id="btnFaq" class="btn-faq" type="button" aria-label="Dúvidas frequentes" aria-expanded="false">Dúvidas frequentes</button>
+    
+      <button id="btnPerfil" class="btn-perfil" type="button" aria-label="Editar meus dados">
+        <img src="./img/usuario-icon.png" alt="">
+      </button>
       </header>
 
       <div vw class="enabled">
@@ -26,8 +34,43 @@
         <h1>NOME DA CATEGORIA</h1>
         <div class="container"></div>
       </main>
+
+      <footer class="footer-acessibilidade">
+  <div class="footer-conteudo">
+
+    <div class="footer-info">
+      <h3>InclusIA</h3>
+      <p>
+        Promovendo acessibilidade, inclusão,
+        respeito e igualdade para todos.
+      </p>
+    </div>
+
+    <div class="footer-contato">
+      <h4>Entre em contato</h4>
+      <p>
+        Tem alguma dúvida ou sugestão?
+      </p>
+      <a href="mailto:inclusia@gmail.com">
+        inclusia@gmail.com
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-final">
+    <p>
+      &copy; 2026 InclusIA.
+      Todos os direitos reservados.
+    </p>
+    <p>Inclusão é um direito de todos.</p>
+  </div>
+</footer>
     
       <script src="./js/secundario.js"></script>
+      <script src="./js/perfil.js"></script>
+      <script src="./js/faq.js"></script>
+
       <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
       <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
 </body>

@@ -1,0 +1,104 @@
+/* Botão ao lado do ícone de perfil (lado direito do header) */
+.btn-faq {
+  position: absolute;
+  top: 25px;
+  right: 80px; /* 20px da borda + 48px do ícone + 12px de espaço */
+  height: 48px;
+  padding: 0 8px;
+  border: none;
+  background: transparent;
+  color: #1e3f84;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.btn-faq:hover,
+.btn-faq:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  outline: none;
+}
+
+/* Painel flutuante (abre no lado direito, como o de "Meus dados") */
+.faq-painel {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 440px;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 20px 24px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+  z-index: 100000;
+  animation: faqEntra 0.25s ease;
+}
+.faq-painel[hidden] { display: none; }
+
+@keyframes faqEntra {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.faq-topo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.faq-topo h2 {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  color: #1e3f84;
+}
+
+.faq-fechar {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Sanfona em tons de azul claro */
+.faq-pergunta {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #5ad1f8;
+  color: #12306b;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.faq-lista > :first-child { margin-top: 0; }
+.faq-pergunta:hover { background: #46c3ec; }
+.faq-pergunta:focus-visible { outline: 3px solid #1e3f84; outline-offset: 2px; }
+
+.faq-resposta {
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #d9f3fd;
+  color: #12306b;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.faq-resposta[hidden] { display: none; }

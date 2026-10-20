@@ -1,0 +1,119 @@
+/* Botão no lado direito do header */
+.btn-perfil {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  line-height: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 50;
+}
+
+.btn-perfil img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.btn-perfil:hover { transform: scale(1.1); }
+
+.btn-perfil:focus-visible {
+  outline: 3px solid #5ad1f8;
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+/* Painel flutuante, estilo VLibras */
+.perfil-painel {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 400px;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 20px 24px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+  z-index: 100000;
+  animation: perfilEntra 0.25s ease;
+}
+.perfil-painel[hidden] { display: none; }
+
+@keyframes perfilEntra {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.perfil-topo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.perfil-topo h2 { margin: 0; font-size: 20px; text-align: center; }
+
+.perfil-fechar {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.perfil-painel h3 {
+  font-size: 14px;
+  text-align: center;
+  margin: 18px 0 10px;
+}
+
+.perfil-painel label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.perfil-painel input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 2px solid #bbb;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+}
+.perfil-painel input:focus { border-color: #6a5acd; outline: none; }
+
+.perfil-salvar {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7f78d2, #5ad1f8);
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.perfil-msg {
+  text-align: center;
+  color: #2e7d32;
+  font-weight: 600;
+  min-height: 1.2em;
+  margin: 10px 0 0;
+}
