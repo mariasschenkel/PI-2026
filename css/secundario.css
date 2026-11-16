@@ -1,4 +1,3 @@
-/* secundario.css - substitua todo o arquivo por isso */
 *{
   padding: 0;
   margin: 0;
@@ -17,8 +16,6 @@ header{
   margin-left: 20px;
   margin-top: 10px;
 }
-
-
 
 nav{
   float: right;
@@ -48,7 +45,7 @@ main{
   background-image: url(../img/fundo.png);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover; /* evita imagem estourada */
+  background-size: cover;
   width: 100%;
   min-height: 100vh;
   padding-bottom: 60px;
@@ -56,8 +53,9 @@ main{
 
 h1{
   text-align: center;
-  padding-top: 40px;
+  padding: 40px 16px 0;
   color: rgb(29,65,130);
+  font-size: clamp(1.3rem, 5vw, 2rem);
 }
 
 /* containers: flex responsivo e sem absolute */
@@ -65,7 +63,7 @@ h1{
 .container2,
 .container3{
   display: flex;
-  flex-wrap: wrap;       /* permite quebra em várias linhas */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   width: 100%;
@@ -81,7 +79,7 @@ h1{
   height: 350px;
   background-color: white;
   border-radius: 30px;
-  margin-top: 0;          /* já temos gap */
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,6 +87,7 @@ h1{
   transition: transform 0.25s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.06);
   overflow: hidden;
+  cursor: pointer;
 }
 .card:focus,
 .card:hover{
@@ -110,14 +109,14 @@ h1{
   background-color: rgb(253,243,172);
 }
 
-/* imagem do card — ESSENCIAL: limita o tamanho */
+/* imagem do card */
 .card img,
 .card .fotocard {
-  width: 160px;        /* tamanho fixo controlado */
+  width: 160px;
   height: 160px;
   max-width: 70%;
   max-height: 60%;
-  object-fit: contain; /* preserva proporção sem estourar */
+  object-fit: contain;
   display: block;
 }
 
@@ -130,19 +129,7 @@ h1{
   padding: 0 8px;
 }
 
-/* Responsividade */
-@media (max-width: 900px){
-  .card{ width: 200px; height: 300px; }
-  .card img{ width: 140px; height: 140px; }
-}
-@media (max-width: 520px){
-  .card{ width: 160px; height: 240px; }
-  .card img{ width: 110px; height: 110px; }
-  h1{ font-size: 20px; padding-top: 16px; }
-}
-
 /* CORES DOS CARDS NA ORDEM DA PÁGINA PRINCIPAL */
-
 .container .card:nth-child(4n+1) {
   background-color: #FFEE93;  /* Amarelo */
 }
@@ -159,10 +146,7 @@ h1{
   background-color: #FFF9C4;  /* Amarelo muito claro */
 }
 
-/* Bordas arredondadas padrão */
-.card {
-  border-radius: 30px;
-  
+
 /* Rodapé do IncluseIA */
 .footer-acessibilidade {
   background-color: #17324d;
@@ -232,7 +216,57 @@ h1{
   margin: 5px 0;
 }
 
-/* Adaptação para celulares */
+
+/* RESPONSIVO */
+
+/* Tablet */
+@media (max-width: 900px){
+  .card{ width: 200px; height: 300px; }
+  .card img{ width: 140px; height: 140px; }
+}
+
+/* Celular: 2 cards por linha */
+@media (max-width: 520px){
+  .container,
+  .container2,
+  .container3{
+    gap: 14px;
+    padding: 0 14px;
+    margin-top: 20px;
+  }
+
+  .card{
+    width: calc(50% - 7px);
+    height: auto;
+    min-height: 200px;
+    padding: 14px 6px;
+    border-radius: 22px;
+  }
+  .card:focus,
+  .card:hover{
+    transform: none;
+  }
+
+  .card img,
+  .card .fotocard{
+    width: 70%;
+    height: auto;
+    max-width: 130px;
+    max-height: none;
+    aspect-ratio: 1 / 1;
+  }
+
+  .card h2{
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  h1{
+    padding-top: 24px;
+  }
+}
+
+/* Rodapé no celular */
 @media (max-width: 600px) {
   .footer-acessibilidade {
     padding: 28px 6% 18px;
@@ -247,24 +281,6 @@ h1{
   .footer-contato {
     min-width: 0;
     width: 100%;
-    .footer-conteudo {
-      display: block;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    text-align: center;
   }
-  
-  .footer-acessibilidade {
-      background-color: #17324d;
-      color: white;
-      width: 100%;
-      box-sizing: border-box;
-  }
-  
-  .footer-final {
-      text-align: center;
-  }
-  }
-}
-
 }

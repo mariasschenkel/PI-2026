@@ -126,3 +126,45 @@ a{
   text-decoration: none;
   color: white;
 }
+
+
+/* RESPONSIVO (o computador continua igual) */
+
+/* Tablet e celular: o container deixa de passar da largura da tela */
+@media (max-width: 760px) {
+  .container {
+    box-sizing: border-box;
+    width: 92%;
+    padding: 40px 28px;
+    margin: 40px auto;
+  }
+
+  input, select {
+    box-sizing: border-box;
+    margin-left: 0;
+    font-size: 16px; /* evita o zoom automático no iPhone */
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  .container {
+    padding: 28px 18px;
+    margin: 24px auto;
+    border-radius: 16px;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.05rem; }
+
+  .checkbox-buttons { gap: 10px; }
+  .checkbox-buttons label {
+    padding: 10px 6px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
