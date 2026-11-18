@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.body.appendChild(painel);
 
-  // sanfona: abre uma pergunta por vez
   const perguntas = painel.querySelectorAll(".faq-pergunta");
   perguntas.forEach((p) => {
     p.addEventListener("click", () => {
