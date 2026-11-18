@@ -1,4 +1,3 @@
-/* Botão no lado direito do header */
 .btn-perfil {
   position: absolute;
   top: 20px;
@@ -26,7 +25,6 @@
   border-radius: 50%;
 }
 
-/* Painel flutuante, estilo VLibras */
 .perfil-painel {
   position: fixed;
   top: 70px;
