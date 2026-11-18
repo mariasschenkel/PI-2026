@@ -40,7 +40,6 @@ header img{
   width: 30px;
 }
 
-/* MAIN */
 main{
   background-image: url(../img/fundo.png);
   background-repeat: no-repeat;
@@ -58,7 +57,6 @@ h1{
   font-size: clamp(1.3rem, 5vw, 2rem);
 }
 
-/* containers: flex responsivo e sem absolute */
 .container,
 .container2,
 .container3{
@@ -73,7 +71,6 @@ h1{
   position: static;
 }
 
-/* cartão */
 .card{
   width: 250px;
   height: 350px;
@@ -109,7 +106,6 @@ h1{
   background-color: rgb(253,243,172);
 }
 
-/* imagem do card */
 .card img,
 .card .fotocard {
   width: 160px;
@@ -120,7 +116,6 @@ h1{
   display: block;
 }
 
-/* título do card */
 .card h2{
   margin-top: 12px;
   font-size: 18px;
@@ -129,7 +124,6 @@ h1{
   padding: 0 8px;
 }
 
-/* CORES DOS CARDS NA ORDEM DA PÁGINA PRINCIPAL */
 .container .card:nth-child(4n+1) {
   background-color: #FFEE93;  /* Amarelo */
 }
@@ -147,7 +141,6 @@ h1{
 }
 
 
-/* Rodapé do IncluseIA */
 .footer-acessibilidade {
   background-color: #17324d;
   color: #0213fa;
@@ -217,15 +210,12 @@ h1{
 }
 
 
-/* RESPONSIVO */
 
-/* Tablet */
 @media (max-width: 900px){
   .card{ width: 200px; height: 300px; }
   .card img{ width: 140px; height: 140px; }
 }
 
-/* Celular: 2 cards por linha */
 @media (max-width: 520px){
   .container,
   .container2,
@@ -266,7 +256,6 @@ h1{
   }
 }
 
-/* Rodapé no celular */
 @media (max-width: 600px) {
   .footer-acessibilidade {
     padding: 28px 6% 18px;
