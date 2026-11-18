@@ -14,11 +14,9 @@
     speechSynthesis.speak(msg);
   };
 
-  // Evita repetir a fala por eventos muito próximos
   const COOLDOWN_MS = 1000;
   const lastSpoken = new WeakMap();
 
-  // Seleciona todos os cards
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
