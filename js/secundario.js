@@ -1,11 +1,9 @@
-// secundario.js - código final e corrigido
 (function(){
-    // --- PEGA NOME E IDADE DO LOCALSTORAGE ---
+
     const nomeUser = localStorage.getItem("usuarioNome") || "";
   const idadeUser = localStorage.getItem("usuarioIdade") || "";
   
   
-    // Função que substitui as frases por nome e idade
     function personalizarFrases(frasesArray) {
       return frasesArray.map(item => {
           let nova = item.frase;
@@ -21,20 +19,16 @@
           return { ...item, frase: nova };
       });
   }
-    // PEGA PARAMETRO DA URL
     const params = new URLSearchParams(window.location.search);
     const categoriaSelecionada = (params.get("categoria") || "").toLowerCase();
   
-    // ATUALIZA TÍTULO
     const titulo = document.querySelector("main h1");
     if (categoriaSelecionada) {
         titulo.textContent = categoriaSelecionada.toUpperCase();
     }
   
-    // CONTAINER
     const container = document.querySelector(".container");
   
-    // ARRAY DE FRASES
     let frases = [
         { imagem: "/../img/falar.png", frase: "MEU NOME É", categoria: "falar" },
         { imagem: "/../img/idade.png", frase: "EU TENHO ", categoria: "falar" },
@@ -145,16 +139,13 @@
         { imagem: "../img/mostrar.png", frase: "QUERO TE MOSTRAR O QUE EU FIZ", categoria: "trabalho" },
     ];
   
-    // 🔥 PERSONALIZA FRASES AQUI ANTES DE USAR
     frases = personalizarFrases(frases);
   
-    // FILTRA CATEGORIA
     const listaFiltrada = frases.filter(item => {
         if (!categoriaSelecionada) return true;
         return String(item.categoria || "").toLowerCase() === categoriaSelecionada;
     });
   
-    // CRIA CARDS
     listaFiltrada.forEach((item, idx) => {
         const card = document.createElement("div");
         card.className = "card";
@@ -187,7 +178,6 @@
         container.appendChild(msg);
     }
   
-    // --- ÁUDIO SEM BOTÃO: agora FUNCIONA porque vem depois dos cards ---
     const speakAlways = (text) => {
         if (!text) return;
         try { speechSynthesis.cancel(); } catch(e){}
