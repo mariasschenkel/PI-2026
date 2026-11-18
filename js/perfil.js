@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // campo do formulário -> chave no localStorage
   const MAPA = {
     perfNome: "usuarioNome",
     perfIdade: "usuarioIdade",
@@ -72,11 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.setAttribute("aria-expanded", "false");
   }
 
-  // o botão abre e fecha o painel
   btn.addEventListener("click", () => (painel.hidden ? abrir() : fechar()));
   document.getElementById("perfilFechar").addEventListener("click", fechar);
 
-  // fecha com ESC ou clicando fora do painel
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !painel.hidden) fechar();
   });
@@ -94,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const novaSenha = document.getElementById("perfSenha").value;
     if (novaSenha) localStorage.setItem("usuarioSenha", novaSenha);
 
-    // atualiza o "BEM VINDO(A)" da página principal, se existir
     const titulo = document.getElementById("tituloPrincipal");
     if (titulo) {
       titulo.innerText = `BEM VINDO(A), ${localStorage.getItem("usuarioNome").toUpperCase()}`;
