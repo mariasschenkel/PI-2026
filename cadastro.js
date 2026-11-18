@@ -11,11 +11,9 @@ document.getElementById("cadastroForm").addEventListener("submit", function(even
   const telResp = document.getElementById("telResp").value.trim();
   const emailResp = document.getElementById("emailResp").value.trim();
 
-  // grava
   localStorage.setItem("usuarioNome", nome);
   localStorage.setItem("usuarioIdade", idade);
 
 
-  // redireciona para principal.html
   window.location.href = "principal.html";
 });
